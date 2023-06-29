@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="main.js" defer></script>
     <title>Kill The Plane</title>
 </head>
+
 <body>
     <nav>
         <img src="img/Logo.svg">
@@ -14,23 +16,30 @@
     <main>
         <div class="game">
             <div id="gameContainer">
-            <div id="gaming" class="gaming">
-                <img src="img/Logo.svg">
-                <button id="start">
-                    Start
-                </button>
-            </div>
-            <div id="onGame" class="onGame">
-                <div>
-                    <button id="back"><img src="backIcon.svg"></button>
-                    <input id="score" value="Score = 0" type="text" disabled>
+                <div id="gaming" class="gaming">
+                    <img src="img/Logo.svg">
+                    <button id="start">
+                        Start
+                    </button>
                 </div>
-                <img class="plane plane1" id="plane1" src="img/Avion.svg">
-                <img class="plane plane2" id="plane2" src="img/Avion.svg">
-                <img class="plane plane3" id="plane3" src="img/Avion.svg">
+                <div id="onGame" class="onGame">
+                    <div class="menu">
+                        <button id="back"><img src="img/backIcon.svg"></button>
+                        <input id="score" value="Score = 0" type="text" disabled>
+                        <input id="record" value="Record = 0" type="text" disabled>
+                    </div>
+                    <img class="plane plane1" id="plane1" src="img/Avion.svg">
+                    <img class="plane plane2" id="plane2" src="img/Avion.svg">
+                    <img class="plane plane3" id="plane3" src="img/Avion.svg">
+
+                    <img src="img/timeOver.svg" id="timeOver" class="timeOverNone">
+                    
+                    <div id="timerContainer"><input type="text" value="30" id="timer" disabled>
+                    <button id="reset"><img src="img/repeat.svg"></button></div>
+                </div>
+                </div>
             </div>
         </div>
-    </div>
     </main>
     <footer>
         <div>
@@ -50,4 +59,5 @@
         </p>
     </footer>
 </body>
+
 </html>
