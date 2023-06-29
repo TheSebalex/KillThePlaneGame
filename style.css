@@ -1,349 +1,338 @@
-*{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    overflow-x: hidden;
-    overflow-y: visible;
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-nav{
-    height: 10%;
-    background-color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+nav {
+  height: 10%;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-nav img{
-    height: 80%;
-    margin: auto;
+nav img {
+  height: 80%;
+  margin: auto;
 }
 
-main>div{
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 15vh;
-    height: 750px;
-    width: 80%;
-    border-radius: 5vw;
-    border: 1vw;
-    border-style:solid;
+main > div {
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 15vh;
+  height: 750px;
+  width: 80%;
+  border-radius: 5vw;
+  border: 1vw;
+  border-style: solid;
 }
-#gameContainer{
-    background-image: url('img/background.jpg');
-    background-size: 100% 100%;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    border-radius: 4vw;    
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.gaming{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 40% 60%;
+#gameContainer {
+  background-image: url("img/background.jpg");
+  background-size: 100% 100%;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 4vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.gaming *{
-    margin: auto;
+.gaming {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 40% 60%;
 }
 
-.gaming img{
-    width: 90%;
+.gaming * {
+  margin: auto;
 }
 
-.gaming button{
-    background-color: rgb(218, 36, 0);
-    border: none;
-    padding: 1vw 2vw;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 1vw;
+.gaming img {
+  width: 90%;
 }
 
-.gaming button:hover{
-    background-color: darkred;
+.gaming button {
+  background-color: rgb(218, 36, 0);
+  border: solid;
+  border-color: white;
+  padding: 1vw 2vw;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 1vw;
 }
 
-.gaming button:active{
-    background-color: rgb(0, 0, 0);
+.gaming button:hover {
+  background-color: darkred;
 }
 
-.onGame{
-    position: relative;
-    display: none;
-    width: 100%;
-    height: 100%;
+.gaming button:active {
+  background-color: rgb(0, 0, 0);
 }
 
-.onGame *{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin-top: 3vw;
+.onGame {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
 }
 
-.onGame .menu input:disabled{
-    position: relative;
-    top: 1vw;
-    width: 15vw;
-    height: 3vw;
-    border-radius: 5vw;
-    border: none;
-    background-color: white;
-    text-align: center;
-    font-size: 2vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
-    user-select: none;
+.onGame * {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 3vw;
 }
 
-#timerContainer{
-    position: absolute;
-    bottom: 5%;
-
-    width: 100%;
-    margin: auto;
+.onGame .menu input:disabled {
+  position: relative;
+  top: 1vw;
+  width: 15vw;
+  height: 3vw;
+  border-radius: 5vw;
+  border: none;
+  background-color: white;
+  text-align: center;
+  font-size: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  user-select: none;
 }
 
-#timer{
-    width: 10%;
-    border-radius: 5vw;
-    border: none;
-    background-color: white;
-    text-align: center;
-    font-size: 2vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
-    user-select: none;
-    margin: auto;
+#timerContainer {
+  position: absolute;
+  bottom: 5%;
+
+  width: 100%;
+  margin: auto;
 }
 
-#reset{
-    background-color: black;
-    width: 8vw;
-    height: 8vw;
-    margin: auto;
-    border: none;
-    border-radius: 50%;
+#timer {
+  width: 10%;
+  border-radius: 5vw;
+  border: solid;
+  border-width: 5px;
+  border-color: black;
+  background-color: rgb(177, 35, 0);
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  user-select: none;
+  margin: auto;
 }
 
-#reset img{
-    width: 80%;
-    height: 80%;
-    margin: auto;
+#reset {
+  background-color: black;
+  width: 8vw;
+  height: 8vw;
+  margin: auto;
+  border: none;
+  border-radius: 50%;
 }
 
-#reset:hover{
-    filter: invert(5);
+#reset img {
+  width: 80%;
+  height: 80%;
+  margin: auto;
 }
 
-#back{
-    background-color: darkred;
-    border: none;
-    width: 6vw;
-    height: 6vw;
-    border-radius: 50%;
-    color: white;
+#reset:hover {
+  filter: invert(5);
 }
 
-#back:hover{
-    filter: brightness(1.2);
+#back {
+  background-color: darkred;
+  border: none;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  color: white;
 }
 
-#back:active{
-    background-color: black;
+#back:hover {
+  filter: brightness(1.2);
 }
 
-#back img{
-    width: 80%;
-    margin: auto;
-    color: white;
+#back:active {
+  background-color: black;
 }
 
-.plane1{
-    animation-name: planeMovement;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-delay: 0s;
+#back img {
+  width: 80%;
+  margin: auto;
+  color: white;
 }
 
-.plane2{
-    animation-name: planeMovement;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-delay: 0s;
+.plane1 {
+  animation-name: planeMovement;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
 }
 
-.plane3{
-    animation-name: planeMovement;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-delay: 0s;
+.plane2 {
+  animation-name: planeMovement;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
 }
 
-#plane1, #plane2, #plane3{
-    position: relative;
-    top: 0;
-    margin-top: 25px;
-    width: 20%;
-    right: 80%;
-    cursor:crosshair;
-    user-select: none;
-}
-#plane2{
-    position: relative;
-    top: 10vh;
-    width: 20%;
-    right: 80%;
-    cursor:crosshair;
-    user-select: none;
-}
-#plane3{
-    position: relative;
-    top: 10vh;
-    width: 20%;
-    right: 80%;
-    cursor:crosshair;
-    user-select: none;
+.plane3 {
+  animation-name: planeMovement;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
 }
 
-
-@keyframes planeMovement{
-    0%{
-        transform: translate(0);
-    }
-    100%{
-        transform: translateX(700%);
-    }
+#plane1,
+#plane2,
+#plane3 {
+  position: relative;
+  top: 0;
+  margin-top: 5vh;
+  width: 20%;
+  right: 80%;
+  cursor: crosshair;
+  user-select: none;
 }
 
-#timeOver{
-    position: absolute;
-    top: 25%;
-    width: 50%;
-    left: 25%;
-    right: 25%;
+@keyframes planeMovement {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(700%);
+  }
 }
 
-.timeOverNone{
-    display: none;
-    opacity: 0;
+#timeOver {
+  position: absolute;
+  top: 25%;
+  width: 50%;
+  left: 25%;
+  right: 25%;
 }
 
-.timeOverBlock{
-    display: block;
+.timeOverNone {
+  display: none;
+  opacity: 0;
 }
 
-.timeOverTransition{
-    opacity: 1;
-    transition: opacity .5s;
+.timeOverBlock {
+  display: block;
 }
 
-.onGameBlock{
-    display: block;
+.timeOverTransition {
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
-.gamingNone{
-    display: none;
+.onGameBlock {
+  display: block;
 }
 
-.death{
-    opacity: 0;
-    filter: invert();
-    transition: opacity .5s;
+.gamingNone {
+  display: none;
 }
 
-footer{
-    background-color: black;
-    position: relative;
-    margin-top: 5vw;
-    top: 2vh;
-    width: 100%;
+.death {
+  opacity: 0;
+  filter: invert();
+  transition: opacity 0.5s;
 }
 
-footer div{
-    padding: 2vw;
-    align-items: center;
-    justify-items: center;
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    color: rgb(128, 128, 128);
-    
+footer {
+  background-color: black;
+  position: relative;
+  margin-top: 5vw;
+  top: 2vh;
+  width: 100%;
 }
 
-footer ul li{
-    list-style: none;
+footer div {
+  padding: 2vw;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  color: rgb(128, 128, 128);
 }
 
-footer ul li a{
-    color: rgb(128, 128, 128);
-    text-decoration: none;
-    transition: color 1s;
-    font-size: 1.5vw;
+footer ul li {
+  list-style: none;
 }
 
-footer ul li a:hover{
-    color: white;
-    transition: 1s;
+footer ul li a {
+  color: rgb(128, 128, 128);
+  text-decoration: none;
+  transition: color 1s;
+  font-size: 1.5vw;
 }
 
-footer div img:hover{
-    filter: brightness(.5);
-    transition: 1s;
+footer ul li a:hover {
+  color: white;
+  transition: 1s;
+}
+
+footer div img:hover {
+  filter: brightness(0.5);
+  transition: 1s;
 }
 
 footer img {
-    width: 20vw;
+  width: 20vw;
 }
 
-footer div p{
-    font-size: 1.5vw;
+footer div p {
+  font-size: 1.5vw;
 }
 
-.footerP{
-    letter-spacing: .1;
-    font-size: 1.5vw;
+.footerP {
+  letter-spacing: 0.1;
+  font-size: 1.5vw;
 }
 
-.footerPDerechos{
-    letter-spacing: normal;
-    text-align: center;
-    color: rgb(128, 128, 128);
-    font-size: 1vw;
-    padding: 1vw;
+.footerPDerechos {
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(128, 128, 128);
+  font-size: 1vw;
+  padding: 1vw;
 }
 
-@media screen and (max-width: 700px){
-    main>div{
-        height: 500px;
-    }
+@media screen and (max-width: 700px) {
+  main > div {
+    height: 500px;
+  }
 
-    #plane1, #plane2, #plane3{
-        top: 50px;
-        margin-top: 50px;
-    }
-    footer{
-        position: absolute;
-        top: auto;
-        bottom: 0;
-    }
+  #plane1,
+  #plane2,
+  #plane3 {
+    top: 50px;
+    margin-top: 50px;
+  }
+  footer {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+  }
 }
