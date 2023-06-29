@@ -1,0 +1,286 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+nav{
+    height: 10%;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+nav img{
+    height: 80%;
+    margin: auto;
+}
+
+main>div{
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 15vh;
+    height: 750px;
+    width: 80%;
+    border-radius: 5vw;
+    border: 1vw;
+    border-style:solid;
+    box-shadow: 0 12px 30px;
+}
+#gameContainer{
+    background-image: url('img/background.jpg');
+    background-size: 100% 100%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 4vw;    
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.gaming{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+
+.gaming *{
+    margin: auto;
+}
+
+.gaming img{
+    width: 90%;
+}
+
+.gaming button{
+    background-color: rgb(218, 36, 0);
+    border: none;
+    padding: 1vw 2vw;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 1vw;
+}
+
+.gaming button:hover{
+    background-color: darkred;
+}
+
+.gaming button:active{
+    background-color: rgb(0, 0, 0);
+}
+
+.onGame{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.onGame *{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.onGame input:disabled{
+    position: relative;
+    top: 1vw;
+    width: 15vw;
+    height: 3vw;
+    border-radius: 5vw;
+    border: none;
+    background-color: white;
+    text-align: center;
+    font-size: 2vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+#back{
+    background-color: darkred;
+    border: none;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    color: white;
+}
+
+#back:hover{
+    filter: brightness(1.2);
+}
+
+#back:active{
+    background-color: black;
+}
+
+#back img{
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.plane1{
+    animation-name: planeMovement;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+.plane2{
+    animation-name: planeMovement;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+.plane3{
+    animation-name: planeMovement;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+#plane1, #plane2, #plane3{
+    position: relative;
+    top: 0;
+    margin-top: 25px;
+    width: 20%;
+    right: 80%;
+    cursor:crosshair;
+    user-select: none;
+}
+#plane2{
+    position: relative;
+    top: 10vh;
+    width: 20%;
+    right: 80%;
+    cursor:crosshair;
+    user-select: none;
+}
+#plane3{
+    position: relative;
+    top: 10vh;
+    width: 20%;
+    right: 80%;
+    cursor:crosshair;
+    user-select: none;
+}
+
+
+@keyframes planeMovement{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translateX(700%);
+    }
+}
+
+.onGameBlock{
+    display: block;
+}
+
+.gamingNone{
+    display: none;
+}
+
+.death{
+    opacity: 0;
+    filter: invert();
+    transition: filter .2s;
+    transition: opacity .5s;
+}
+
+footer{
+    background-color: black;
+    position: relative;
+    margin-top: 5vw;
+    top: 2vh;
+    width: 100%;
+}
+
+footer div{
+    padding: 2vw;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    color: rgb(128, 128, 128);
+    
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer ul li a{
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+    transition: color 1s;
+    font-size: 1.5vw;
+}
+
+footer ul li a:hover{
+    color: white;
+    transition: 1s;
+}
+
+footer div img:hover{
+    filter: brightness(.5);
+    transition: 1s;
+}
+
+footer img {
+    width: 20vw;
+}
+
+footer div p{
+    font-size: 1.5vw;
+}
+
+.footerP{
+    letter-spacing: .1;
+    font-size: 1.5vw;
+}
+
+.footerPDerechos{
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(128, 128, 128);
+    font-size: 1vw;
+    padding: 1vw;
+}
+
+@media screen and (max-width: 700px){
+    main>div{
+        height: 500px;
+    }
+
+    #plane1, #plane2, #plane3{
+        top: 50px;
+        margin-top: 50px;
+    }
+    footer{
+        position: absolute;
+        top: auto;
+        bottom: 0;
+    }
+}
