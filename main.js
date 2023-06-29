@@ -12,7 +12,7 @@ let planes = document.querySelectorAll(".plane");
 let timeOver = document.getElementById("timeOver");
 
 let timer = document.getElementById("timer");
-let seconds = 30;
+let seconds = 45;
 
 let actualScore = 0;
 let recordScore = 0;
@@ -78,16 +78,16 @@ function repeat() {
   }, 500);
   score.value = "Score = 0";
   if (seconds == 0) {
-    seconds = 30;
+    seconds = 45;
     timerChange;
   } else {
-    seconds = 30;
-    timer.value = "30s";
+    seconds = 45;
+    timer.value = "45s";
   }
 }
 
 function timerIntervalFunction() {
-  if (seconds > 0 && seconds < 32) {
+  if (seconds > 0 && seconds < 46) {
     seconds--;
   } else {
     timeOver.classList.add("timeOverBlock");
@@ -104,8 +104,8 @@ function timerIntervalFunction() {
 }
 
 function timerChange() {
-  seconds = 30;
-  timer.value = "30s";
+  seconds = 45;
+  timer.value = "45s";
   counter;
 }
 
